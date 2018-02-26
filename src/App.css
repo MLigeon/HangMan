@@ -1,0 +1,277 @@
+body {
+  background-color: #ECEFF1;
+}
+
+.container {
+  margin-top: -25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.guesses {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hangman {
+  margin: auto;
+  width: 100%;
+}
+
+.guessinput {
+  position: absolute;
+  bottom: 0
+}
+
+.gameTitle {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hangman-container {
+  width: auto;
+  height: 400px;
+  background-color: #CFD8DC;
+  position: relative;
+}
+
+.top-pole {
+  top: 20px;
+  right: 10px;
+  width: 50%;
+  height: 5%;
+  background-color: #CFD8DC;
+  position: absolute;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.side-pole {
+  width: 5%;
+  height: 90%;
+  background-color: #CFD8DC;
+  right: 10px;
+  bottom: 0;
+  position: absolute;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url('http://www.telegraph.co.uk/content/dam/news/2016/09/08/107667228_beech-tree-NEWS_trans_NvBQzQNjv4BqplGOf-dgG3z4gg9owgQTXEmhb5tXCQRHAvHRWfzHzHk.jpg?imwidth=450');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rope {
+  top: 20px;
+  width: 100%;
+  height: 15%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.rope div {
+  width: 2%;
+  height: 100%;
+  background-color: #8D6E63;
+  margin: 0 auto;
+}
+
+.head {
+  width: 100%;
+  height: 20%;
+}
+
+.head div {
+  width: 20%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: black;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.head div.is-visible {
+  opacity: 1;
+}
+
+.body {
+  width: 100%;
+  height: 24%;
+  display: flex;
+}
+
+.chest {
+  width: 2%;
+  height: 100%;
+}
+.chest div {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.chest div.is-visible {
+  opacity: 1;
+}
+
+.leftArm, .rightArm {
+  width: 49%;
+  height: 100%;
+  position: relative;
+}
+
+.leftArm div, .rightArm div {
+  width: 50%;
+  height: 5%;
+  background-color: black;
+  top: 35%;
+  position: absolute;
+}
+
+.leftArm div {
+  right: -10%;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: opacity 1s;
+}
+.leftArm div.is-visible {
+  opacity: 1;
+}
+
+.rightArm div {
+  left: -10%;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 1s;
+}
+.rightArm div.is-visible {
+  opacity: 1;
+}
+
+.leftLeg, .rightLeg {
+  width: 50%;
+  height: 30%;
+  bottom: 0;
+  position:absolute;
+}
+
+.leftLeg {
+  left: 0;
+}
+
+.rightLeg {
+  right: 0;
+}
+
+.leftLeg div, .rightLeg div {
+  margin-top: 10px;
+  width: 50%;
+  height: 5%;
+  top: 0;
+  background-color: black;
+  position: absolute;
+}
+
+.leftLeg div {
+  margin-right: -7px;
+  right: -5%;
+  transform: rotate(-50deg);
+  opacity: 0;
+  transition: opacity 1s;
+}
+.leftLeg div.is-visible {
+  opacity: 1;
+}
+
+.rightLeg div {
+  left: -8%;
+  transform: rotate(50deg);
+  opacity: 0;
+  transition: opacity 1s;
+}
+.rightLeg div.is-visible {
+  opacity: 1;
+}
+
+.winMessage {
+  background: #5C6BC0;
+  padding: 5px;
+}
+
+.lostMessage {
+  background-color: #EC407A;
+  padding: 5px;
+}
+
+.winMessage p, .lostMessage p {
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  margin:0;
+}
+
+button {
+  border: 1px solid #E91E63;
+  border-radius: 2px;
+  padding: 8px;
+  background-color: #EC407A;
+  color: white;
+  font-size: 1em;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #E91E63;
+}
+
+button.btn-large {
+  font-size: 2em;
+}
+
+.instruction-text {
+  text-align: center;
+}
+
+input:focus {
+  border-color: rgb(40, 40, 40);
+}
+
+input.text-input {
+  width: 100%;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  outline: 0;
+  padding: 5px;
+  border: 1px solid #EC407A;
+  border-radius: 3px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.label {
+  margin-right: 5px;
+  padding: 5px 5px 0 5px;
+  background-color: #E91E63;
+  color: #fff;
+  border-radius: 3px;
+  text-align: center;
+  width: auto;
+}
+
+.correctguesses p {
+  font-size: 3em;
+}
+
+.correctguesses span {
+  width: 35px;
+  display: inline-block;
+  text-align: center;
+}
